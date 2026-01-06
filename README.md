@@ -23,7 +23,7 @@ Cliquer sur Recherche
 Lire l’analyse structurée :
 Résumé général,Analyse des faits,Informations confirmées / infirmées,Sources vérifiées
 
-# Etape 6 (facultatif):
+# Etape 6 :
 Cliquer sur un lien pour l’ouvrir dans le navigateur 
 
 # Etape 7:
