@@ -1,0 +1,353 @@
+\documentclass[a4paper, 12pt, twoside]{article}
+\makeatletter
+\newcommand{\@membrec}{}
+\makeatother
+\usepackage[utf8]{inputenc}		% LaTeX, comprend les accents !
+\usepackage[T1]{fontenc}		
+\usepackage[francais]{babel}
+\usepackage{lmodern}
+\usepackage{ae,aecompl}
+\usepackage[top=2.5cm, bottom=2cm, 
+			left=3cm, right=2.5cm,
+			headheight=15pt]{geometry}
+\usepackage{graphicx}
+\usepackage{eso-pic}	% Nécessaire pour mettre des images en arrière plan
+\usepackage{array} 
+\usepackage{hyperref}
+\usepackage{float}
+\input{pagedegarde}
+
+
+\title{Système intelligent de recherche et de validation d’informations}
+
+
+\entreprise{Le nom de votre entreprise}
+\datedebut{26 mars 2018}
+\datefin{date de fin du stage}
+
+
+\membrea{RADJABOU Sahouda 44003885}
+\membreb{RATREMA Ny Avotiana 44000401}
+\membred{Nom  prénom étudiant 4}
+\membree{Nom  prénom étudiant 5}
+
+
+\begin{document}
+\pagedegarde
+
+\tableofcontents
+\newpage
+
+\section{Introduction}
+Ce projet s’inscrit dans le cadre de notre deuxième année de Licence MIASHS à l’Université Paris Nanterre.\\
+Nous avons choisi de développer une application d’assistance à la vérification d’informations, capable de rechercher des sources sur internet et d’analyser leur fiabilité à l’aide de l’intelligence artificielle.  
+
+\section{Environnement de travail}
+
+Nous avons commencer par répartir les tâches principales. Dans un premier temps, nous avons travaillé chacune de notre côté afin de réfléchir à notre partie du projet et aux fonctionnalités que nous pourrions ajouter à l’application. N’étant pas dans le même TD, nous allions régulièrement au TD l’une de l’autre afin de pouvoir travailler ensemble.
+
+Nous avons choisi d’utiliser le langage Python pour l’ensemble du projet, car il a de nombreuses bibliothèques adaptées à notre objectif, notamment pour la création d’interfaces graphiques, les requêtes Web et l’utilisation d’API d’intelligence artificielle.
+
+Pour créer l’interface graphique, nous avons utilisé la bibliothèque Tkinter. Le développement du projet a été réalisé à l’aide de l’éditeur Visual Studio Code.
+Nous avons également utilisé GitHub pour suivre l'évolution du projet.
+
+
+\section{Description du projet et objectifs}
+
+Le projet s’articule en trois parties :
+
+Recherche d’informations sur le Web : permettre à l’utilisateur d’effectuer une recherche automatique d’informations à partir d’une question, en s’appuyant sur des sources disponibles en ligne.
+
+Analyse et vérification des informations : analyser les résultats obtenus afin d’évaluer la fiabilité des informations, de fournir une synthèse structurée, et un résultat explicite.
+
+Présentation et sauvegarde des résultats : afficher les résultats au sein d’une interface graphique et permettre leur sauvegarde.
+
+	\subsection{Exemple de sous-section : vérification d’informations par intelligence artificielle}
+
+L’un des éléments centraux de notre projet est le système de vérification d’informations à partir d’une question posée par l’utilisateur. Cette fonctionnalité permet d’analyser une affirmation ou une question en s’appuyant sur des sources disponibles sur Internet.
+
+Le processus s’organise autour de deux étapes:
+
+Recherche d’informations: Une requête est envoyée à l’API Tavily pour récupérer plusieurs sources pertinentes en lien avec la question de l’utilisateur. Ces résultats servent de base factuelle pour l’analyse.
+
+Analyse et synthèse : Les informations collectées sont transmises à l’IA Mistral, qui produit une réponse structurée comprenant un résumé, l’analyse des faits, les éléments confirmés ou infirmés, ainsi qu’une conclusion sur la véracité de l’information.
+
+Cette approche privilégie la simplicité et la clarté pour l’utilisateur, en facilitant la vérification des informations
+
+	\subsection{Autre exemple de sous section : Export des résultats au format PDF et TXT}
+
+Afin de faciliter la consultation et l’archivage des résultats, l’application propose une fonctionnalité d’export des analyses au format PDF et TXT. Cette fonctionnalité permet à l’utilisateur de sauvegarder localement les résultats obtenus après une recherche.
+
+Le format TXT offre une version simple et lisible du contenu, tandis que le format PDF permet une présentation plus structurée des résultats. Ces options d’export renforcent l’utilité de l’application en permettant de conserver une trace des analyses réalisées.
+
+\section{Utilisation de l’intelligence artificielle dans la réalisation du projet}
+
+    \subsection{Assistance de l’IA dans le développement du projet}
+
+        \subsubsection{ Les Ia qui ont permis à l'avancement du projet }
+
+        ChatGPT nous a principalement aidés pour le code Python/Tkinter, le débogage et la logique générale de l’application, en proposant de nombreuses variantes de fonctions et d’implémentations. En revanche, pour la structure du rapport PDF, il nous a donné beaucoup d’alternatives différentes, parfois trop complexes, sans aboutir à une organisation simple et évidente.
+
+        Perplexity nous a surtout servi à structurer le contenu du rapport PDF: choix des sections (résumé, analyse, sources, conclusion), ordre logique et façon de présenter les informations de manière claire et lisible. Là où ChatGPT multipliait les pistes, Perplexity a simplifié les choses en proposant une structure directe et facilement exploitable, ce qui a résolu les difficultés que nous avions pour organiser le PDF.
+
+        Bing nous a été utile pour rechercher rapidement de la documentation officielle et des exemples de code pendant le développement, notamment sur les bibliothèques et APIs utilisées. Il a surtout servi d’outil de recherche ponctuel et s’est révélé moins adapté pour un travail de structuration ou de réflexion approfondie sur le projet.
+
+        Claude nous a principalement aidés à organiser la structure globale du projet et à améliorer le design ainsi que les textes de l’interface. Il est particulièrement efficace pour clarifier l’architecture de l’outil, proposer une présentation cohérente et rédiger des formulations compréhensibles pour l’utilisateur
+
+        \subsubsection{ Erreur bloquante et leçon retenue}
+        
+        Grâce à l’IA, on a pu résoudre des erreurs bloquantes dans notre projet.
+        
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.8\textwidth]{conversationCGPT.png}
+            \caption{résolution des erreurs bloquantes avec ChatGPT}
+            \label{fig:conversationCGPT}
+        \end{figure}
+        
+        Par exemple avec l'erreur "no route matched with those values" reçue en testant l'API Mistral. C'était un type d'erreur que je ne savais pas comment interpréter. Grâce à l'IA, j'ai pu comprendre ce que signifiait vraiment ce message, identifier que l'endpoint utilisé n'était pas compatible avec mon plan.
+        
+        De manière plus générale, face à plusieurs erreurs simultanées, l’IA m’a permis d’analyser rapidement chaque problème, d’en comprendre l’origine et de trouver des solutions efficaces
+        
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.8\textwidth]
+            {erreur 2.png}
+            \caption{résolution des erreurs bloquantes avec Perplexity}
+            \label{fig:erreur 2}
+        \end{figure}
+        
+        Un blocage important a été la génération d’un PDF “propre” à partir des réponses de mon assistant: au début, je ne savais pas comment gérer les sections (Résumé général, Analyse des faits, Sources vérifiées), retirer le gras inutile ou remplacer certains emojis incompatibles avec le format PDF.
+        
+        L’IA m’a aidé à comprendre comment structurer le document, définir des styles personnalisés pour les titres et les paragraphes, et adapter le contenu (par exemple en transformant les emojis en symboles et en forçant le paragraphe de Résumé général en texte normal). Grâce à ces indications, j’ai pu passer d’un export brut difficile à lire à un PDF clair, hiérarchisé et exploitable pour l’utilisateur.
+        
+        Bien que le résultat ne soit pas nécessairement conforme au texte de notre application,notre objectif principal de présentation structuré est présent.
+
+    \subsection{Fonctionnement de l'IA utilisée}
+    
+L’intelligence artificielle joue un rôle central dans notre projet en permettant d’analyser et de traiter les informations de manière automatisée et structurée.
+
+Dans un premier temps, une requête est envoyée à l’API Tavily afin d’effectuer une recherche Internet et de récupérer plusieurs sources pertinentes en lien avec la question de l’utilisateur. Ces résultats servent de base factuelle pour l’analyse.
+
+Dans un second temps, ces résultats sont transmis à l’API Mistral. L’IA analyse uniquement les informations fournies, sans générer de faits non présents dans les sources. Elle produit ensuite une réponse structurée comprenant un résumé, une analyse des faits, les éléments confirmés ou infirmés, ainsi qu’une conclusion indiquant si l’information est considérée comme vraie, fausse ou non prouvée.
+
+Enfin, le système fournit un résultat explicite. Cette approche permet de limiter les réponses ambiguës.
+
+
+\section{Bibliothèques, Outils et technologies}
+
+Ce projet repose sur une combinaison de bibliothèques Python, d’outils d’intelligence artificielle et de services web afin de proposer un assistant de vérification d’informations fiable et automatisé.
+
+\subsection{Outils et API externes}
+
+Tavily API : moteur de recherche web orienté intelligence artificielle. Il permet de collecter des sources fiables à partir d’Internet pour l’analyse et la vérification des informations.\\
+Mistral AI API: service d’intelligence artificielle utilisé pour analyser les résultats de recherche, effectuer un raisonnement critique et produire une conclusion explicite (Vrai, Faux ou Non prouvé).\\
+Navigateur Web : utilisé via la bibliothèque \\
+
+
+\subsection{Bibliothèques Python}
+
+    tkinter : bibliothèque standard de Python pour la création d’interfaces graphiques. Elle est utilisée pour concevoir la fenêtre principale, les boutons, les champs de saisie et les boîtes de dialogue.\\
+    
+    re : bibliothèque dédiée à la manipulation des expressions régulières, utilisée pour détecter les URLs, structurer le texte et identifier les sections de la réponse.\\
+    
+    json : permet la manipulation et l’échange de données au format JSON, notamment pour l’envoi et la réception des données entre les API.\\
+    
+    webbrowser : utilisée pour ouvrir les liens des sources fiables dans le navigateur par défaut de l’utilisateur.
+    
+requests : bibliothèque HTTP permettant d’effectuer des requêtes vers les API externes (Mistral AI) et de vérifier l’accessibilité des liens web.\\
+
+Tavily Python Client : bibliothèque officielle permettant l’interaction avec l’API Tavily pour effectuer des recherches web automatisées.\\
+    
+ReportLab : utilisée pour la génération de documents PDF structurés, permettant l’export des résultats de recherche et d’analyse.\\
+
+Pillow (PIL): bibliothèque de traitement d’images. Elle est importée pour une extension de l’interface graphique (logos ou illustrations).\\
+
+\section{Travail réalisé}
+
+Fonctionnalités réalisées :\\
+- Recherche automatique d’informations sur Internet : l’application interroge un moteur de recherche web orienté intelligence artificielle afin de collecter des sources pertinentes en lien avec la question posée par l’utilisateur.\\
+- Analyse et vérification des faits par intelligence artificielle : les résultats de recherche sont analysés par un modèle d’IA, qui effectue un raisonnement critique et fournit une conclusion explicite (Vrai, Faux ou Non prouvé).\\
+- Évaluation de la fiabilité des sources : les liens récupérés sont automatiquement vérifiés (accessibilité, protocole HTTPS, appartenance à des domaines reconnus comme fiables).\\
+- Interface graphique interactive : une application de bureau a été développée à l’aide de tkinter, permettant à l’utilisateur de poser une question, de consulter les résultats et d’accéder directement aux sources cliquables.\\
+- Mise en forme intelligente des résultats : les réponses générées sont structurées en sections claires (résumé, analyse, éléments confirmés ou infirmés, sources), avec une mise en évidence visuelle des titres et des liens.\\
+- Export des résultats : l’utilisateur peut exporter l’analyse sous forme de fichier texte txt ou de document PDF, facilitant l’archivage et le partage des résultats.\\
+
+Fonctionnalités non réalisées :\\
+- Historique des recherches et base de données : la mise en place d’une base de données permettant de conserver l’historique des questions posées, des résultats obtenus et des sources associées n’a pas été réalisée.\\
+- Déploiement web : l’application a été développée sous forme de logiciel de bureau.\\
+
+\section{Répartition des tâches}
+
+\begin{tabular}{|p{4cm}|p{9cm}|}
+\hline
+\textbf{Étudiant} & \textbf{Tâches réalisées} \\
+\hline
+\textbf{Sahouda \newline Radjabou} &
+\begin{itemize}
+  \item Implémentation du système d’intelligence artificielle
+  \item Implémentation du système d’import des résultats (PDF/TXT)
+  \item Rédaction du rapport
+\end{itemize} \\
+\hline
+\textbf{Ny Avotiana \newline Ratrema} &
+\begin{itemize}
+  \item Analyse du système d’intelligence artificielle
+  \item Implémentation du système de gestion des sources fiables
+  \item Conception et design de l’interface graphique
+  \item Finalisation du rapport
+\end{itemize} \\
+\hline
+\end{tabular}
+
+
+\section{Difficultés rencontrées}
+
+Au cours de ce projet, nous avons été confrontées à plusieurs difficultés.
+
+L’une des principales difficultés concerne le temps de réponse de l’application. L’utilisation d’API externes pour effectuer la recherche sur Internet et l’analyse par intelligence artificielle peut entraîner des délais d’attente parfois importants, ce qui rend l’application plus lente lors de certaines requêtes.
+
+Par ailleurs, une autre difficulté importante a été liée à la compréhension initiale du projet. Dans une première phase, nous avions orienté notre travail vers la comparaison automatique entre un texte source et un texte dérivé afin d’évaluer leur similarité. Par la suite, nous avons tenté de réaliser une vérification à partir d’un seul texte en utilisant le modèle Ollama. Cependant, cette solution présentait des limites, car le modèle ne parvenait pas à répondre de manière fiable à toutes les questions. Cette approche ne correspondait finalement pas aux attentes du projet.
+
+Après avoir identifié cette erreur, nous avons décidé de réorienter le projet vers la vérification d’informations à partir de sources disponibles sur Internet. Cette évolution a nécessité une adaptation du code et une redéfinition des fonctionnalités. 
+
+Exemples d’exécution de cette première version du projet:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{comparateurTextes.png}
+    \caption{Exemple d’exécution de la première version du projet basée sur la comparaison de textes}
+    \label{fig:comparateurTextes}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{verifierTexte.png}
+    \caption{Exemple d’exécution de la première version du projet : vérification texte seul}
+    \label{fig:verifierTexte}
+\end{figure}
+
+\section{Bilan}
+
+	\subsection{Conclusion}
+    
+    Ce projet nous a permis de concevoir une application d’assistance à la vérification d’informations en ligne, en combinant recherche Web et analyse par intelligence artificielle. L’objectif principal était de fournir à l’utilisateur un outil capable d’analyser une question, de proposer une synthèse structurée et de donner un résultat explicite sur la fiabilité des informations.
+
+    La réalisation de ce projet nous a permis de mettre en pratique nos connaissances en programmation Python, en utilisation d’API externes et en conception d’interfaces graphiques. Il nous a également permis de mieux comprendre les enjeux liés à la fiabilité des informations disponibles sur Internet et les limites des outils d’intelligence artificielle.
+
+    
+	\subsection{Perspectives}
+
+    L’application présente certaines limites. Tout d’abord, le temps de réponse peut être relativement long, en raison de l’utilisation d’API externes pour la recherche et l’analyse des informations. De plus, la fiabilité des résultats dépend fortement de la qualité des sources disponibles sur Internet.
+
+    Par ailleurs, l’application ne permet pas actuellement de gérer plusieurs utilisateurs ni de personnaliser les critères de sélection des sources. Les fonctionnalités proposées restent donc limitées à un usage simple et individuel.
+
+    Alors, plusieurs améliorations pourraient être envisagées, telles que l’optimisation des performances, ou encore la possibilité de sauvegarder un historique des recherches.
+
+\newpage
+
+\section{Webographie}
+\begin{thebibliography}{2}
+   \bibitem[CAT]{cat} \url{savoircoder.fr/cat}
+   \bibitem[ChatGPT]{chatgpt}\url{https://chatgpt.com/} 
+   \bibitem[DeepSeek]{deepseek}\url{https://www.deepseek.com/en}
+   \bibitem[Perplexity]{perplexity}\url{https://www.perplexity.ai/}
+   \bibitem[Claude]{claude}\url{https://claude.ai/} 
+    \bibitem[Mistral]{mistral}\url{https://console.mistral.ai/} 
+    \bibitem[Tavily]{tavily}\url{https://www.tavily.com/} 
+    
+\end{thebibliography}
+
+\newpage
+\section{Annexes}
+\appendix
+\makeatletter
+\def\@seccntformat#1{Annexe~\csname the#1\endcsname:\quad}
+\makeatother
+
+	\section{Cahier des charges}
+
+Titre du projet : Système intelligent de recherche et de
+validation d’informations
+
+Objectif : Développer une application capable de rechercher des informations sur Internet, d’analyser leur fiabilité via une intelligence artificielle et de fournir une conclusion claire.
+
+Fonctionnalités principales : L’application doit proposer une interface graphique intuitive pour poser des questions, effectuer une recherche web automatisée via l’API Tavily, analyser les résultats avec l’IA Mistral, vérifier la fiabilité et l’accessibilité des sources, permettre l’export des résultats en TXT et PDF et ouvrir directement les sources dans le navigateur.
+
+Contraintes techniques : Le projet doit être développé en Python 3, utiliser les bibliothèques tkinter, requests, json, re, reportlab et Pillow, fonctionner comme application desktop multiplateforme et gérer les clés API de manière sécurisée.
+
+Objectifs de qualité : L’analyse doit être précise et structurée, les sources fiables mises en évidence, l’interface claire et ergonomique, et l’export facile à lire et à partager.
+
+    
+	\section{Exemple d'exécution du projet}
+    
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{Affirmation.png}
+    \caption{Interface finale de l'application avec vérification d'une information réelle}
+    \label{fig:test_final}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{Analyse des faits.png}
+    \caption{partie: Analyse des fait}
+    \label{fig:test_final}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{Confirmé et infirmé.png}
+    \caption{partie: ce qui est confirmé/infirmé}
+    \label{fig:test_final}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{Question fausse.png}
+    \caption{Interface finale de l'application avec vérification d'une information fausse}
+    \label{fig:test_final}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{pdf.png}
+    \caption{Exemple de resultat pdf}
+    \label{fig:pdf}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{txt.png}
+    \caption{Exemple de resultat txt}
+    \label{fig:txt}
+\end{figure}
+
+	\section{Manuel utilisateur}
+
+0) Chercher vos clés API :
+
+Pour avoir votre  \href{https://deepwiki.com/tavily-ai/tavily-mcp/4.1-tavily-api-key}{clé API Tavily}  
+
+Pour avoir votre  \href{https://iamistral.com/api/}{clé API Mistral}  \\
+
+1) Mettre votre clé API Tavily à la ligne 22 et votre clé API Mistral à la ligne 23 du code \\
+    
+2) Lancer l’application\\
+
+3) Saisir une question dans le champ prévu\\
+
+4) Cliquer sur Recherche\\
+
+5) Lire l’analyse structurée :
+Résumé général
+Analyse des faits
+Informations confirmées / infirmées
+Sources vérifiées\\
+
+6) (facultatif) Cliquer sur un lien pour l’ouvrir dans le navigateur\\
+
+7) Exporter le résultat en TXT ou PDF pour les conserver
+
+
+\end{document}
