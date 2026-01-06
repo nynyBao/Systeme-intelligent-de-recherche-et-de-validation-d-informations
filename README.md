@@ -2,9 +2,11 @@
 ## Instructions
 
 # Etape 1: 
-Avoir vos clé API et mettre la clé API Tavily ligne 22 et la clé Mistralligne 23 du code
+Avoir vos clé API et mettre la clé API Tavily ligne 22 et la clé Mistralligne 23 du code<br>
+
 Pour clé API Tavily :
-    https://deepwiki.com/tavily-ai/tavily-mcp/4.1-tavily-api-key
+    https://deepwiki.com/tavily-ai/tavily-mcp/4.1-tavily-api-key <br>
+    
 Pour clé API Mistral : 
     https://iamistral.com/api/
     
