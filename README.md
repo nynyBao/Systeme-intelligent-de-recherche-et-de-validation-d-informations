@@ -85,5 +85,5 @@ Lancer l’application :
 ---
 
 ## 👤 Auteurs
-- Ny Avotiana  
-- Sahouda
+Projet réalisé par Ny Avotiana RATREMA, Sahouda RADJABOU
+dans le cadre d’un travail universitaire (2024 - 2025).
